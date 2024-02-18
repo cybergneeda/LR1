@@ -8,7 +8,7 @@ public static void main(String[] args)
     System.out.println("Исходная строка без пробелов в начале и в конце: "+str1);
     System.out.println("Исходная строка в верхнем регистре: "+str1.toUpperCase());
     str1=str1.toLowerCase();
-    System.out.println("Исходная строка в нижнем регистре: "+str1.toLowerCase());
+    System.out.println("Исходная строка в нижнем регистре: "+str1);
     System.out.println("Строка начинается со слова \"если\": "+str1.startsWith("если"));
     System.out.println("Строка начинается со слова \"волк\": "+str1.startsWith("волк"));
     System.out.println("Длина строки: "+str1.length()+" символа"); 

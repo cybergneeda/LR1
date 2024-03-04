@@ -10,14 +10,15 @@ for (int i = 0; i < myArray.length; i++) {
 myArray[i] = r.nextInt(100);
 }
 System.out.println("Исходный массив: "+Arrays.toString(myArray));
-int temp = 0;
-for (int i = 0; i < myArray.length; i++)
-for (int j = 0; j < myArray.length - 1; j++) {
-if (myArray[j + 1] < myArray[j]) {
-temp = myArray[j];
-myArray[j] = myArray[j + 1];
-myArray[j + 1] = temp;
+for (int i = 0; i < myArray.length-1; i++) {
+int minPos=i;
+for (int j = i+1; j < myArray.length; j++) {
+    if (myArray[j]<myArray[minPos])
+        minPos=j; 
 }
+    int temp = myArray[minPos];
+    myArray[minPos]=myArray[i];
+    myArray[i]=temp;
 }
 System.out.println("Отсортированный массив: "+Arrays.toString(myArray));
 }
